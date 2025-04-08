@@ -1,8 +1,59 @@
+```text
+Prerequisite:
+
+Install R:
+https://cran.r-project.org/
+
+Install RStudio:
+https://posit.co/download/rstudio-desktop/
+
+Install Anaconda:
+https://www.anaconda.com/download/success
+
+```
 ```shell
+## Create virtual environment 
+conda create -n machine-learning-ana-env python=3.12 anaconda
+
+## Active environment
 conda activate machine-learning-ana-env
 ```
 
+
+
+
+```R
+# Run Regression with R
+## Step 0: Open RStudio
+
+## Step 1: install packages
+install.packages("readxl")
+install.packages("dplyr")
+
+## Step 2: set working directory
+setwd("F:\\learning-area\\uit-msc\\subjects\\phan-tich-du-lieu-kinh-doanh\\uit-msc-data-analyst-assignments\\hw1")
+
+## Step 3 run code:
+source("hw1-regression-R.R")
+```
+
 ```python
+# Run Regression with python
+
+## Step 1: Open code directory with VSCode
+## Step 2: Open Terminal
+## Step 3: Active conda environment: conda activate machine-learning-ana-env
+## Step 4: Run code
+python python hw1-regression-python.py
+
+```
+
+```text
+===== note to copy to ms word =====
+```
+
+```python
+## Preprocessor
 from pandas import read_csv, ExcelWriter
 from sklearn.model_selection import train_test_split
 
