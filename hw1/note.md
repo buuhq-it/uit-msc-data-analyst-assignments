@@ -1,3 +1,7 @@
+```shell
+conda activate machine-learning-ana-env
+```
+
 ```python
 from pandas import read_csv, ExcelWriter
 from sklearn.model_selection import train_test_split
@@ -29,10 +33,39 @@ with ExcelWriter('./datasets/housing_data_preprocessor.xlsx') as writer:
 from pandas import read_excel
 from statsmodels.formula.api import ols
 
-df =  read_excel("hw1-group11-regression-excel.xlsx", sheet_name="data")
+df =  read_excel("hw1-regression-excel.xlsx", sheet_name="data")
 df.columns = [col.replace(' ', '') for col in df.columns]
 #df.head()
 
 model = ols("Price ~ Area + Frontage + AccessRoad + Floors + Bedrooms + Bathrooms", data = df).fit()
-model.summary()
+# model.summary()
+print(model.summary())
+```
+
+```R
+setwd("F:\\learning-area\\uit-msc\\subjects\\phan-tich-du-lieu-kinh-doanh\\uit-msc-data-analyst-assignments\\hw1")
+
+install.packages("readxl")
+install.packages("dplyr")
+
+# Regression with R
+library(readxl)
+library(dplyr)
+
+# Đọc dữ liệu
+df <- read_excel("hw1-regression-excel.xlsx", sheet = "data")
+names(df) <- gsub(" ", "", names(df))
+
+# Hồi quy tuyến tính
+model <- lm(Price ~ Area + Frontage + AccessRoad + Floors + Bedrooms + Bathrooms, data = df)
+
+# In kết quả
+# summary(model)
+print(summary(model))
+```
+
+```R
+setwd("F:\\learning-area\\uit-msc\\subjects\\phan-tich-du-lieu-kinh-doanh\\uit-msc-data-analyst-assignments\\hw1")
+getwd()
+source("hw1-group11-regression-R.R")
 ```
