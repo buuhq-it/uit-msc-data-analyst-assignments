@@ -35,6 +35,7 @@ setwd("F:\\learning-area\\uit-msc\\subjects\\phan-tich-du-lieu-kinh-doanh\\uit-m
 
 ## Step 3 run code:
 source("hw1-regression-R.R")
+source("hw2-nonlinear-regression-R.R")
 ```
 
 ```python
@@ -170,4 +171,7 @@ conda install statsmodels -c conda-forge
 ```
 ```shell
 python hw2-nonlinear-regression-python.py
+```
+```R
+source("hw2-nonlinear-regression-R.R")
 ```
