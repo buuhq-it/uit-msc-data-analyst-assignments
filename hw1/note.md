@@ -157,4 +157,5 @@ IRkernel::installspec(user = FALSE)  # Đăng ký kernel cho Jupyter
 conda create -n ml-basic-r-python-env python=3.12 r-base=4.4 r-irkernel ipykernel jupyterlab -c conda-forge
 conda activate ml-basic-r-python-env
 
+conda activate ml-basic-r-python-env
 ```
