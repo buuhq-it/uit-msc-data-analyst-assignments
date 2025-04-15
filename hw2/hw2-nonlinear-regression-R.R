@@ -3,7 +3,7 @@ library(readxl)
 library(dplyr)
 
 # Đọc dữ liệu
-df <- read_excel("hw1-regression-excel.xlsx", sheet = "data")
+df <- read_excel("hw2-regression-excel.xlsx", sheet = "data")
 names(df) <- gsub(" ", "", names(df))
 
 # Hồi quy tuyến tính

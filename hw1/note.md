@@ -99,6 +99,10 @@ getwd()
 
 install.packages("readxl")
 install.packages("dplyr")
+install.packages("polyreg")
+install.packages(c("readxl", "dplyr", "polyreg"))
+
+install.packages("readxl", "dplyr", "polyreg")
 conda install r-readxl r-dplyr
 
 # Regression with R
@@ -158,4 +162,12 @@ conda create -n ml-basic-r-python-env python=3.12 r-base=4.4 r-irkernel ipykerne
 conda activate ml-basic-r-python-env
 
 conda activate ml-basic-r-python-env
+conda install pandas scikit-learn -c conda-forge
+conda install openpyxl -c conda-forge
+conda install statsmodels -c conda-forge
+
+
+```
+```shell
+python hw2-nonlinear-regression-python.py
 ```
