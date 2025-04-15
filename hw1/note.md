@@ -166,7 +166,7 @@ conda activate ml-basic-r-python-env
 conda install pandas scikit-learn -c conda-forge
 conda install openpyxl -c conda-forge
 conda install statsmodels -c conda-forge
-
+conda activate tktmdt
 
 ```
 ```shell
