@@ -24,3 +24,22 @@ model = OLS(y, Z_df).fit()
 
 # 5. In kết quả
 print(model.summary())
+
+'''
+# 6. Dự đoán với dữ liệu mới
+X_new = pd.DataFrame({
+    "Area": [100],
+    "Bedrooms": [3],
+    "Bathrooms": [2]
+})
+
+# Biến đổi polynomial
+Z_new = poly.transform(X_new)
+Z_new_df = pd.DataFrame(Z_new, columns=poly.get_feature_names_out(X.columns))
+# Thêm hằng số (intercept)
+# Z_new_df = add_constant(Z_new_df)
+Z_new_df = add_constant(Z_new_df, has_constant='add')
+# Dự đoán
+y_pred = model.predict(Z_new_df)
+print("Giá nhà dự đoán:", y_pred.iloc[0])
+'''
